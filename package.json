@@ -4,7 +4,7 @@
   "private": true,
   "description": "Initial seed project for student.",
   "scripts": {
-    "test": "wdio run wdio.conf.js"
+    "test": "wdio wdio.conf.js"
   },
   "repository": {
     "type": "git",
@@ -12,10 +12,9 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@wdio/cli": "^5.16.7"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "@wdio/cli": "^5.16.9",
     "@wdio/local-runner": "^5.16.7",
     "@wdio/mocha-framework": "^5.16.5",
     "@wdio/spec-reporter": "^5.16.5",
