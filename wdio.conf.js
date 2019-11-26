@@ -91,7 +91,11 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
+<<<<<<< HEAD
     baseUrl: 'http://ip-5236.sunline.net.ua:38015',
+=======
+    baseUrl: '"http://ip-5236.sunline.net.ua:38015',
+>>>>>>> 8d4d322164dbce6a326d08b1c1601eb544903a08
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,

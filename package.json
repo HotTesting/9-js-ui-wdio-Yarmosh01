@@ -13,9 +13,13 @@
   "author": "",
   "license": "ISC",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "dependencies": {
     "@wdio/cli": "^5.16.9"
   },
+=======
+  "dependencies": {},
+>>>>>>> 8d4d322164dbce6a326d08b1c1601eb544903a08
 =======
   "dependencies": {},
 >>>>>>> 8d4d322164dbce6a326d08b1c1601eb544903a08
