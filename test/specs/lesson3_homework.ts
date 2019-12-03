@@ -1,18 +1,24 @@
-
+import * as assert from 'assert';
 
 describe("Items search", function() {
     it("should show results in case multiple items matches", function() {
+      browser.url('http://ip-5236.sunline.net.ua:38015')
     const searchField = $('input[type = "search"]')
     searchField.setValue('duck');
-     browser.keys(['Meta', 'uE007'])
-     browser.pause(5000)
+    $('input[type="search"]').addValue("Enter");
+
+    const resultsBox = $('#box-search-results');
+    const res = resultsBox.$$('main [class="col-xs-6 col-sm-4 col-md-3"]')
+    
+    
+    
+  //   browser.keys(['Meta', 'uE007'])
+   
 
       throw new Error("NOT IMPLEMENTED");
-
     });
   
-
-    /*
+ 
     it("should redirect to item page in case only one result matches", function() {
       throw new Error("NOT IMPLEMENTED");
     });
@@ -38,7 +44,7 @@ describe("Items search", function() {
     it("must send messages to shop administration", function() {
       throw new Error("NOT IMPLEMENTED");
     });
-    */
+    
   });
 
 

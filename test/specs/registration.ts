@@ -1,3 +1,4 @@
+import * as assert from 'assert';
 
 describe('User', function () {
     it('can register', function () {
@@ -17,10 +18,20 @@ describe('User', function () {
         registrationForm.$('input[name="confirmed_password"]').setValue(email)
 
         registrationForm.$('button[name="create_account"]').click()
-
-        // '#notices .alert-success'
+    
         // 'Your customer account has been created.'
+
         browser.pause(2000)
+
+        const alert = $('#notices .alert-success')
+
+        assert(alert.isDisplayed(), `Expected success alert to be visible after registration`)
+
+        const alertText = alert.getText()
+        const expectedText = 'Your customer account has been created.'
+        assert(alertText.includes(expectedText), 
+            `Alert text: "${alertText}" to match expected: "${expectedText}", after succesful registration`)
+
     })
     })
 
