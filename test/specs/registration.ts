@@ -12,7 +12,7 @@ describe('Website', function () {
         $('input[name = "email"]').setValue(email)
         $('input[name = "phone"]').setValue('+380441111111')
 
-
+        
         
     })
     })
