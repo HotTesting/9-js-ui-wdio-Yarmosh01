@@ -2,40 +2,64 @@ import * as assert from 'assert';
 
 describe("Items search", function() {
     it("should show results in case multiple items matches", function() {
-      browser.url('http://ip-5236.sunline.net.ua:38015')
+   browser.url('http://ip-5236.sunline.net.ua:38015')
     const searchField = $('input[type = "search"]')
     searchField.setValue('duck');
-    $('input[type="search"]').addValue("Enter");
-
+    searchField.addValue("Enter");
+browser.pause(3000);
     const resultsBox = $('#box-search-results');
-    const res = resultsBox.$$('main [class="col-xs-6 col-sm-4 col-md-3"]')
-    expect(res).not.to.equal(0)
+    const res = resultsBox.$$('main [class="col-xs-6 col-sm-4 col-md-3"]');
+    assert(res, 'search result eqaul to 0')
    
-    throw new Error("NOT IMPLEMENTED");
   });
-    
-    
-  //   browser.keys(['Meta', 'uE007'])
-
- 
-  
-
+        
  
     it("should redirect to item page in case only one result matches", function() {
-      throw new Error("NOT IMPLEMENTED");
+    browser.url('http://ip-5236.sunline.net.ua:38015')
+    const searchField = $('input[type = "search"]')
+    searchField.setValue('purple');
+    searchField.addValue("Enter");
+browser.pause(3000);
+//expect(browser.getUrl()).to.contain("query=purple-duck");
+    assert(browser.getUrl().includes("purple-duck"), 'Page with product not opened')
     });
   
+
+
     it("should redirect to 'no matching results' in case no items matched", function() {
-      throw new Error("NOT IMPLEMENTED");
+      const searchField = $('input[type = "search"]')
+      searchField.setValue('invalid request');
+      searchField.addValue("Enter");
+  browser.pause(3000)    
+      const actualText = $('#box-search-results').getText()
+      const expectedText = 'No matching results'
+      assert(actualText.includes(expectedText), 'The expected text does not match the actual') 
+
     });
   });
   
+
   // Each implemented test gives you 20 points (max total - 40)
   describe("Search results sorting", function() {
-    it("correctly arranges items when using 'by price' sorting", function() {
-      throw new Error("NOT IMPLEMENTED");
+    it.only("correctly arranges items when using 'by price' sorting", function() {
+      
+    browser.url('http://ip-5236.sunline.net.ua:38015')
+    const searchField = $('input[type = "search"]')
+    searchField.setValue('duck');
+    searchField.addValue("Enter");
+    $('span[class = "btn btn-default"').click
+  
+        browser.pause(3000);
+    const resultsBox = $('#box-search-results');
+    const res = resultsBox.$$('main [class="col-xs-6 col-sm-4 col-md-3"]');
+   
+   
+    assert(res, 'search result eqaul to 0')
+
     });
   
+
+
     it("correctly arranges items when using 'by name' sorting", function() {
       throw new Error("NOT IMPLEMENTED");
     });
