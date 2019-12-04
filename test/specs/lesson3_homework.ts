@@ -9,15 +9,17 @@ describe("Items search", function() {
 
     const resultsBox = $('#box-search-results');
     const res = resultsBox.$$('main [class="col-xs-6 col-sm-4 col-md-3"]')
-    
+    expect(res).not.to.equal(0)
+   
+    throw new Error("NOT IMPLEMENTED");
+  });
     
     
   //   browser.keys(['Meta', 'uE007'])
-   
 
-      throw new Error("NOT IMPLEMENTED");
-    });
+ 
   
+
  
     it("should redirect to item page in case only one result matches", function() {
       throw new Error("NOT IMPLEMENTED");
@@ -46,7 +48,7 @@ describe("Items search", function() {
     });
     
   });
-
+  
 
   //-----------
 
