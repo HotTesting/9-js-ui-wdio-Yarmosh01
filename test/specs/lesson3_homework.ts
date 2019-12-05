@@ -41,24 +41,27 @@ browser.pause(3000);
 
   // Each implemented test gives you 20 points (max total - 40)
   describe("Search results sorting", function() {
+
+
     it.only("correctly arranges items when using 'by price' sorting", function() {
       
     browser.url('http://ip-5236.sunline.net.ua:38015')
     const searchField = $('input[type = "search"]')
     searchField.setValue('duck');
     searchField.addValue("Enter");
-    $('span[class = "btn btn-default"').click
-  
-        browser.pause(3000);
+    $('span[class = "btn btn-default"]').click
+          browser.pause(3000);
     const resultsBox = $('#box-search-results');
-    const res = resultsBox.$$('main [class="col-xs-6 col-sm-4 col-md-3"]');
-   
-   
-    assert(res, 'search result eqaul to 0')
+    const res = resultsBox.$$('span[class = "price"]');
+    for (_i = res; _i < res.length; _i++) {
+        if (_i > _i+1){
+            return false;
+        }
+    }
 
+    assert(res, '0')
     });
   
-
 
     it("correctly arranges items when using 'by name' sorting", function() {
       throw new Error("NOT IMPLEMENTED");
@@ -72,7 +75,7 @@ browser.pause(3000);
     });
     
   });
-  
+
 
   //-----------
 
@@ -90,10 +93,10 @@ it("should show results in case multiple items matches", function() {
   expect($$(allDuckItems).every(duck => duck.isDisplayed())).to.equal(true);
 });
 // ************************************************************************************
-const duckPriceArr = $$(allDucks).map(duck =>
+const duckPriceArr = $$(allDucks).map(duck =>  //то вытянул все цены, хоть я хз шо такое мап и стрелка
   parseInt(duck.getAttribute("data-price"))
 );
-const duckPriceNewArr = duckPriceArr.slice(0); // copy array
+const duckPriceNewArr = duckPriceArr.slice(0); // copy array зачем?
 duckPriceNewArr.sort((a, b) => a - b); // price sorting
 
 // ************************************************************************************
