@@ -42,7 +42,7 @@ browser.pause(3000);
   // Each implemented test gives you 20 points (max total - 40)
   describe("Search results sorting", function() {
 
-
+/*
     it.only("correctly arranges items when using 'by price' sorting", function() {
       
     browser.url('http://ip-5236.sunline.net.ua:38015')
@@ -50,18 +50,20 @@ browser.pause(3000);
     searchField.setValue('duck');
     searchField.addValue("Enter");
     $('span[class = "btn btn-default"]').click
-          browser.pause(3000);
+
+          browser.pause(10000);
     const resultsBox = $('#box-search-results');
     const res = resultsBox.$$('span[class = "price"]');
-    for (_i = res; _i < res.length; _i++) {
-        if (_i > _i+1){
+    var i;
+    for (i = res; i < res.length; ++i) {
+        if (i > i+1){
             return false;
         }
     }
 
     assert(res, '0')
     });
-  
+*/
 
     it("correctly arranges items when using 'by name' sorting", function() {
       throw new Error("NOT IMPLEMENTED");
