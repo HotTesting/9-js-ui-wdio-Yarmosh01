@@ -1,4 +1,5 @@
 import * as assert from 'assert';
+import { isConditionalExpression } from 'typescript';
 
 describe("Items search", function() {
     it("should show results in case multiple items matches", function() {
@@ -45,28 +46,28 @@ browser.pause(3000);
 /*
     it.only("correctly arranges items when using 'by price' sorting", function() {
       
-    browser.url('http://ip-5236.sunline.net.ua:38015')
-    const searchField = $('input[type = "search"]')
-    searchField.setValue('duck');
-    searchField.addValue("Enter");
-    $('span[class = "btn btn-default"]').click
-
-          browser.pause(10000);
+    browser.url('http://ip-5236.sunline.net.ua:38015/search?query=duck&page=1&sort=price')
     const resultsBox = $('#box-search-results');
-    const res = resultsBox.$$('span[class = "price"]');
+    const res = resultsBox.$$('span.price');
     var i;
     for (i = res; i < res.length; ++i) {
         if (i > i+1){
             return false;
         }
     }
-
     assert(res, '0')
     });
 */
 
-    it("correctly arranges items when using 'by name' sorting", function() {
-      throw new Error("NOT IMPLEMENTED");
+    it.only("correctly arranges items when using 'by name' sorting", function() {
+      
+      browser.url('http://ip-5236.sunline.net.ua:38015/search?query=duck&page=1&sort=name')
+      const resultsBox = $('#box-search-results');
+      const resss = resultsBox.$$('div.name');
+      console.log('res', resss)
+     browser.pause(3500)
+      assert(resss, '0')
+          
     });
   });
   
