@@ -11,7 +11,6 @@ browser.pause(3000);
     const resultsBox = $('#box-search-results');
     const res = resultsBox.$$('main [class="col-xs-6 col-sm-4 col-md-3"]');
     assert(res, 'search result eqaul to 0')
-   
   });
         
  
@@ -43,7 +42,7 @@ browser.pause(3000);
   // Each implemented test gives you 20 points (max total - 40)
   describe("Search results sorting", function() {
 
-/*
+
     it.only("correctly arranges items when using 'by price' sorting", function() {
       
     browser.url('http://ip-5236.sunline.net.ua:38015/search?query=duck&page=1&sort=price')
@@ -57,7 +56,7 @@ browser.pause(3000);
     }
     assert(res, '0')
     });
-*/
+
 
     it.only("correctly arranges items when using 'by name' sorting", function() {
       
@@ -74,7 +73,23 @@ browser.pause(3000);
   // BONUS LEVEL - this test gives you 15 points
   describe("Contact us form", function() {
     it("must send messages to shop administration", function() {
-      throw new Error("NOT IMPLEMENTED");
+      browser.url('http://ip-5236.sunline.net.ua:38015/customer-service-s-0')
+      const ContactusForm = $('#box-contact-us');
+      let nickname = //random string
+
+      $('input[name = "name"]').setValue('CustomerName') //use nickname variable 
+      let email = (nickname + '@tmail.tom')
+
+      ContactusForm.$('input[name = "email"]').setValue(email)
+      $('input[name = "subject"]').setValue('CustomerName') //use nickname variable 
+      $('input[name = "message"]').setValue('any message + 123512345 + @!#$*')
+
+      $('button[name = "send"]').click
+
+      assert($('div.alert.alert-success').isDisplayed, 'Alert is not Displayed')
+     
+
+
     });
     
   });
