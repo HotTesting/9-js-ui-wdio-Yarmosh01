@@ -1,5 +1,6 @@
 import * as assert from 'assert';
 import { isConditionalExpression } from 'typescript';
+// import { newId } from '../uniqName';
 
 describe("Items search", function() {
     it("should show results in case multiple items matches", function() {
@@ -10,19 +11,19 @@ describe("Items search", function() {
 browser.pause(3000);
     const resultsBox = $('#box-search-results');
     const res = resultsBox.$$('main [class="col-xs-6 col-sm-4 col-md-3"]');
-    assert(res, 'search result eqaul to 0')
+    assert(res, 'search result eqaul to 0') //
   });
         
  
-    it("should redirect to item page in case only one result matches", function() {
+  it("should redirect to item page in case only one result matches", function () {
     browser.url('http://ip-5236.sunline.net.ua:38015')
     const searchField = $('input[type = "search"]')
     searchField.setValue('purple');
     searchField.addValue("Enter");
-browser.pause(3000);
-//expect(browser.getUrl()).to.contain("query=purple-duck");
+    browser.pause(3000);
+    //expect(browser.getUrl()).to.contain("query=purple-duck");
     assert(browser.getUrl().includes("purple-duck"), 'Page with product not opened')
-    });
+  });
   
 
 
@@ -43,53 +44,61 @@ browser.pause(3000);
   describe("Search results sorting", function() {
 
 
-    it.only("correctly arranges items when using 'by price' sorting", function() {
+    it("correctly arranges items when using 'by price' sorting", function() {
       
     browser.url('http://ip-5236.sunline.net.ua:38015/search?query=duck&page=1&sort=price')
     const resultsBox = $('#box-search-results');
     const res = resultsBox.$$('span.price');
     var i;
-    for (i = res; i < res.length; ++i) {
+    for (i = res; i < res.length; ++i) { //map
         if (i > i+1){
             return false;
         }
     }
-    assert(res, '0')
+    assert(res, '0') //¯\_(ツ)_/¯
     });
 
 
-    it.only("correctly arranges items when using 'by name' sorting", function() {
+    it("correctly arranges items when using 'by name' sorting", function() {
       
       browser.url('http://ip-5236.sunline.net.ua:38015/search?query=duck&page=1&sort=name')
       const resultsBox = $('#box-search-results');
-      const resss = resultsBox.$$('div.name');
-      console.log('res', resss)
+      const res = resultsBox.$$('div.name');
+      //map
+      //console.log('res', resss)
      browser.pause(3500)
-      assert(resss, '0')
+      assert(res, '0')     //¯\_(ツ)_/¯
           
     });
   });
   
-  // BONUS LEVEL - this test gives you 15 points
+  // BONUS LEVEL - this test gives you 15 points          
   describe("Contact us form", function() {
-    it("must send messages to shop administration", function() {
+   
+      it.only("must send messages to shop administration", function() {
       browser.url('http://ip-5236.sunline.net.ua:38015/customer-service-s-0')
       const ContactusForm = $('#box-contact-us');
-      let nickname = //random string
+     
+        function newId() {
+          // First character is an 'a', it's good practice to tag id to begin with a letter
+          return 'axxxxxxxxxxx'.replace(/[x]/g, function (_) {
+              const val = Math.random() * 16 | 0;
+              return val.toString(16);
+          });
+        }
+      let nickname = newId();
 
       $('input[name = "name"]').setValue('CustomerName') //use nickname variable 
       let email = (nickname + '@tmail.tom')
-
       ContactusForm.$('input[name = "email"]').setValue(email)
-      $('input[name = "subject"]').setValue('CustomerName') //use nickname variable 
-      $('input[name = "message"]').setValue('any message + 123512345 + @!#$*')
 
-      $('button[name = "send"]').click
+      $('input[name = "subject"]').setValue(email)    //use nickname variable 
+      $('textarea[name = "message"]').setValue('any message + 123512345 + @!#$*')
 
+      $('button[name = "send"]').click()
+      browser.pause(3000)
       assert($('div.alert.alert-success').isDisplayed, 'Alert is not Displayed')
      
-
-
     });
     
   });
