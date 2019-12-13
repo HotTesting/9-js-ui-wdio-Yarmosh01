@@ -1,4 +1,8 @@
-import * as assert from 'assert';
+//mport * as assert from 'assert';
+const chai = require("chai");
+const expect = chai.expect
+const assert = chai.assert
+
 
 describe('Website', function(){
     it('should be alive', function(){
@@ -10,7 +14,7 @@ describe('Website', function(){
                     }
     
     })
-
+    
     it.only('cheking assertions', function () {
         try {
             assert(false)
