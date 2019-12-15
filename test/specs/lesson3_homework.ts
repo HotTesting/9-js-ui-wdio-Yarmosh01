@@ -47,9 +47,10 @@ browser.pause(3000);
 
     it("correctly arranges items when using 'by price' sorting", function() {   
     browser.url('http://ip-5236.sunline.net.ua:38015/search?query=duck');
+    $('#box-search-results a[href*="sort=price"]').click();
     const resultsBox = $('#box-search-results');
     const duckItems = resultsBox.$$('div .products .product');
-    $('#box-search-results a[href*="sort=price"]').click();
+  
 
     const sortedByClickArray = duckItems.map(duck => parseInt(duck.getAttribute("data-price")));
     const sortedBySortArray = sortedByClickArray.map(duck => duck);
@@ -65,13 +66,20 @@ browser.pause(3000);
 
     it("correctly arranges items when using 'by name' sorting", function() {
       
-      browser.url('http://ip-5236.sunline.net.ua:38015/search?query=duck&page=1&sort=name')
+      browser.url('http://ip-5236.sunline.net.ua:38015/search?query=duck')
+      $('#box-search-results a[href*="sort=name"]').click();
       const resultsBox = $('#box-search-results');
-      const res = resultsBox.$$('div.name');
-      //map
-      //console.log('res', resss)
-     browser.pause(3500)
-      assert(res, '0')     //¯\_(ツ)_/¯
+      const duckItems = resultsBox.$$('div .products .product');
+    
+      const duckClickedNames = duckItems.map(duck => duck.getAttribute("data-name"));
+      const duckSortedNames = duckClickedNames.map(duck => duck);
+      duckSortedNames.sort;
+      
+      console.log('resssss', duckClickedNames, '**********', duckSortedNames)
+
+      for (let i = 0; i < duckClickedNames.length; i++){
+        assert.equal(duckClickedNames[i], duckSortedNames[i], "sorting results does not match")
+      }
           
     });
   });
@@ -91,16 +99,15 @@ browser.pause(3000);
               return val.toString(16);
           });
         }
-      let nickname = newId();
-
+      
+        let nickname = newId();
       $('input[name = "name"]').setValue('CustomerName') //use nickname variable 
       let email = (nickname + '@tmail.tom')
       ContactusForm.$('input[name = "email"]').setValue(email)
+      ContactusForm.$('input[name = "subject"]').setValue(email)    //use nickname variable 
+      ContactusForm.$('textarea[name = "message"]').setValue('any message + 123512345 + @!#$*')
 
-      $('input[name = "subject"]').setValue(email)    //use nickname variable 
-      $('textarea[name = "message"]').setValue('any message + 123512345 + @!#$*')
-
-      $('button[name = "send"]').click()
+      ContactusForm.$('button[name = "send"]').click()
       browser.pause(3000)
       assert($('div.alert.alert-success').isDisplayed, 'Alert is not Displayed')
      
