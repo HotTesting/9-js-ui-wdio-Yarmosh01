@@ -1,4 +1,4 @@
-import * as assert from 'assert';
+/* import * as assert from 'assert';
 import { isConditionalExpression } from 'typescript';
 // import { newId } from '../uniqName';
 
