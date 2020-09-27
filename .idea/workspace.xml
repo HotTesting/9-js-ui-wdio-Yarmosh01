@@ -19,13 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a2cd0af-712d-4dcd-a58a-632be38c7d55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/9-js-ui-wdio-Yarmosh01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/9-wdio-Yarmosh01.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="8a2cd0af-712d-4dcd-a58a-632be38c7d55" name="Default Changelist" comment="CC-01">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/specs/lesson3_homework.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/specs/registration.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +40,16 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -58,12 +61,21 @@
       <option name="presentableId" value="Default" />
       <updated>1575557195765</updated>
       <workItem from="1575557199063" duration="2560000" />
-      <workItem from="1600634441731" duration="2466000" />
+      <workItem from="1600634441731" duration="2538000" />
+      <workItem from="1601045543946" duration="2189000" />
     </task>
+    <task id="LOCAL-00001" summary="CC-01">
+      <created>1601045434832</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601045434832</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -77,6 +89,10 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="CC-01" />
+    <option name="LAST_COMMIT_MESSAGE" value="CC-01" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600637449688">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -87,5 +103,9 @@
     </state>
     <state x="397" y="199" key="SettingsEditor/-2560.-297.2560.1417/0.0.1792.1120@0.0.1792.1120" timestamp="1600637347029" />
     <state x="397" y="199" key="SettingsEditor/-2560.-320.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1600636957135" />
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2" timestamp="1601045444579">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="496" y="300" key="Vcs.Push.Dialog.v2/-2560.-320.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1601045444579" />
   </component>
 </project>
