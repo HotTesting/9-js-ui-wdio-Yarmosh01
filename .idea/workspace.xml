@@ -20,11 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a2cd0af-712d-4dcd-a58a-632be38c7d55" name="Default Changelist" comment="CC-01">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/specs/smoke.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/specs/example.e2e.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/specs/example.e2e.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdio.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/wdio.conf.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +33,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../9-js-webdriverio-Yarmosh01" />
   </component>
   <component name="ProjectId" id="1UZHSAbatMpKgpvWxPB4DT5ul3O" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -62,7 +66,7 @@
       <updated>1575557195765</updated>
       <workItem from="1575557199063" duration="2560000" />
       <workItem from="1600634441731" duration="2538000" />
-      <workItem from="1601045543946" duration="2189000" />
+      <workItem from="1601045543946" duration="5682000" />
     </task>
     <task id="LOCAL-00001" summary="CC-01">
       <created>1601045434832</created>
@@ -98,6 +102,22 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog/-2560.-320.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1600637449688" />
+    <state width="1771" height="318" key="GridCell.Tab.0.bottom" timestamp="1601242650847">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1771" height="318" key="GridCell.Tab.0.bottom/-2560.-320.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1601242650847" />
+    <state width="1771" height="318" key="GridCell.Tab.0.center" timestamp="1601242650846">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1771" height="318" key="GridCell.Tab.0.center/-2560.-320.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1601242650846" />
+    <state width="1771" height="318" key="GridCell.Tab.0.left" timestamp="1601242650845">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1771" height="318" key="GridCell.Tab.0.left/-2560.-320.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1601242650845" />
+    <state width="1771" height="318" key="GridCell.Tab.0.right" timestamp="1601242650846">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="1771" height="318" key="GridCell.Tab.0.right/-2560.-320.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1601242650846" />
     <state x="397" y="199" key="SettingsEditor" timestamp="1600637347029">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>

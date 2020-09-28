@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "wdio run wdio.conf.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,12 @@
     "@wdio/spec-reporter": "^6.4.7",
     "@wdio/sync": "^6.5.0",
     "chromedriver": "^85.0.1",
-    "wdio-chromedriver-service": "^6.0.4"
-  }
+    "wdio-chromedriver-service": "^6.0.4",
+    "typescript": "3.6.2",
+    "ts-node": "8.3.0",
+    "@types/mocha": "5.2.7",
+    "@types/node": "^14.11.2",
+    "@types/chai": "4.2.0"
+  },
+  "dependencies": {}
 }
